@@ -1,0 +1,53 @@
+body {
+    background-color: #14131A;
+    color: white;
+    font-family: "Roboto", sans-serif; /*рубленные шрифты (шрифты без засечек или гротески)*/
+}
+
+.container {
+    max-width: 1140px; /*максимальная ширина шапки*/
+    margin: auto; /*шапка по центру*/
+}
+
+.header {
+    padding-top: 40px; /*отступ сверху*/
+    display: flex; /*картинка и пункты меню на оном уровне*/
+    align-items: center; /* относительно картики пункты меню посеридине*/
+    margin-bottom: 80px; /*текст начиная с даты отступает от хедера на 80*/
+}
+
+.logo-link{
+    display: inline-block;
+}
+
+.naw-menu {
+    margin: 0;
+    padding: 50px; /*отступ от картинки до меню*/
+    list-style: none; /* устанавливает все свойства списка в одном объявлении */
+    display: flex;
+}
+
+.naw-menu-item {
+    margin-right: 30px; /* отступы между текстами */
+}
+
+.naw-menu-link {
+    text-decoration: none; /* убираем подчеркивание ссылок */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.film-date{
+    display: block; /*чтобы с датой не на одной строке были*/
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 38px; /*расстояние между датой и Веном*/
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.film-disp{
+    margin-top: 40px; /*расстояние между тестом про Тома и Веном*/
+    max-width: 423px;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.8);
+}
