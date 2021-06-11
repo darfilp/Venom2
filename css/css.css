@@ -4,8 +4,13 @@ body {
     font-family: "Roboto", sans-serif; /*рубленные шрифты (шрифты без засечек или гротески)*/
 }
 
+.img {
+    max-width: 100%;
+}
+
 .container {
-    max-width: 1140px; /*максимальная ширина шапки*/
+    /* max-width: 1140px; /*максимальная ширина шапки*/
+    width: 90%;
     margin: auto; /*шапка по центру*/
 }
 
@@ -40,16 +45,20 @@ body {
     display: block; /*чтобы с датой не на одной строке были*/
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 38px; /*расстояние между датой и Веном*/
+    margin-bottom: 5%; /*расстояние между датой и Веном*/
     color: rgba(255, 255, 255, 0.8);
 }
 
 .film-disp{
-    margin-top: 40px; /*расстояние между тестом про Тома и Веном*/
+    margin-top: 3%; /*расстояние между тестом про Тома и Веном*/
     max-width: 423px;
     font-size: 16px;
     line-height: 140%;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.venom2{
+    width: 70%;
 }
 
 .button{
@@ -82,17 +91,19 @@ body {
 }
 
 .button-group{
-    margin-top: 70px;
+    margin-top: 5%;
 }
 
 .venom-img {
     position: absolute; /*картинка не будет учитываться остальными элементами, тк элементы не будут обращать на нее внимание и может (картинка) наезжать на элементы*/
     top: 0;
     right: 0;
+    max-width: 728px;
+    width: 40%;
 }
 
 .blood {
-    background:  url("../img/blood.png") no-repeat top right, #14131A url("../img/background.jpg");
+    background:  url("../img/blood.png") no-repeat top right / 70%, #14131A url("../img/background.jpg");
 }
 
 .primary-pg {
@@ -191,4 +202,127 @@ body {
 .poster-rap .list {
     margin: 0;
     margin-bottom: 20px;
+}
+
+.menu-button{
+    display: none;
+}
+
+.menu-close {
+    display: none;
+}
+@media(max-width: 1024px) {
+    .content {
+        flex-direction: column; /*кононка с постером вниз*/
+        padding-bottom: 5%;
+    }
+    .col {
+        margin-bottom:  2%;
+    }
+    .header {
+        margin-bottom:  4%;
+    }
+    .film {
+        margin-top: 10%;
+    }
+}
+@media(max-width: 768px) {
+    .blood {
+        background: #14131A;
+    }
+    .venom-img {
+        top: 15%; /*веном сползает*/
+    }
+}
+
+@media(max-width: 576px) { /*меню*/
+    .naw-menu{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /*меню по очереди*/
+        transform: translateX(100%);
+        transition: transform 0.2s;
+}
+    .naw-menu-item {
+        margin-bottom: 2%;
+        margin-top: 2%;
+        margin-right: 0;
+    }
+    .naw-menu-link {
+        color: #14131A;
+    }
+    .menu-close {
+        position: fixed;
+        opacity: 0;
+        right: 25px;
+        top: 65px;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        transform: translateX(300%);
+        transition: transform 0.2s;
+        transition-delay: 0.2s;
+    }
+    .is-active{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .menu-close-text {
+        margin-right: 10px;
+    }
+    .naw{
+        margin-left: auto;
+    }
+    .menu-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        background-color: #14131A;
+        cursor: pointer;
+        color: white;
+    }
+    .menu-button-text{
+        margin-right: 10px;
+    }
+    .button-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .film-text {
+        text-align: center;
+    }
+
+    .poster-rap {
+        flex-direction: column;
+    }
+    .poster {
+        margin-bottom: 4%;
+    }
+    .content .trailer {
+        max-width: 350px;
+        width: 100%;
+    }
+    .poster {
+        margin-right: 0px;
+        max-width: 350px;
+        width: 100%;
+    }
+    .column-2 {
+        column-count: 1;
+    }
 }

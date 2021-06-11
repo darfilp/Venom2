@@ -13,9 +13,17 @@
 <body class="blood">
 <div class="container">
     <header class="header">
-        <a href="https://darfilp.github.io/Venom2/" class="logo-link">
+        <a href="/" class="logo-link">
             <img src="img/logo.png" width="46" height="71" alt="Логотип" class="logo-img"> </a>
         <naw class="naw">
+            <button class="menu-button">
+                <span class="menu-button-text">Меню</span>
+                <img src="img/menu.svg" alt="Меню" class="menu-button">
+            </button>
+            <button class="menu-close">
+                <span class="menu-close-text">Закрыть</span>
+                <img src="img/arow.svg" alt="Стрелка назад" class="menu-close-icon">
+            </button>
             <ul class="naw-menu">
                 <li class="naw-menu-item">
                     <a href="about.html" class="naw-menu-link">О фильме</a>
@@ -40,10 +48,10 @@
         </div>
         <!-- /.hero-text -->
         <div class="button-group">
-            <button class="button-primary">
+            <a data-fancybox href="https://www.youtube.com/watch?v=Othd8W8o3t0" class="button-primary">
                 <img width="15" src="img/play.png" alt="Иконка" class="button-icon">
                 <span class="button-text">смотреть трейлер</span>
-            </button>
+            </a>
             <a href="trailer.html" class="button button-link">
                 <img width="15" src="img/ticket.png" alt="Иконка" class="button-icon">
                 <span class="button-text">билеты на премьеру</span>
@@ -56,5 +64,9 @@
 </div>
 <img src="img/venom.png" alt="Веном" class="venom-img">
 <!-- /.container -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
